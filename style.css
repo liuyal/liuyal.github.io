@@ -30,7 +30,7 @@ body {
     line-height: 0px;
     position: fixed;
     margin: 0 auto;
-    margin-top: 0.3%;
+    margin-top: 0.35%;
     margin-left: 0.25%;
 }
 
@@ -89,6 +89,16 @@ p.p_main{
     text-transform: uppercase;
 }
 
+.wrapper2{
+    margin-bottom: 5%;
+    position:relative;
+    bottom:5%;
+}
+
+.down_button{
+     margin-bottom: 2%;
+}
+
 .button {
     /*border: solid #F9F3F4 3px;
     border-radius: 10px;
@@ -105,7 +115,7 @@ p.p_main{
     border-top-width: 4px
 }
 
-.port {
+.portfolio {
     outline-color: black;
     outline-style: solid;
     outline-width: thin;
@@ -134,8 +144,9 @@ p.p_main{
 .contentAM {
     margin-left: 52px;
     margin-top: 100px;
+    margin-bottom: 100px;
     position: static;
-    height: 580px;
+    height: 600px;
     width: 635px;
 
     outline-color: transparent;
@@ -213,8 +224,8 @@ p.ex2-3 {
     position: static;
     height: 285px;
     width: 450px;
-    margin-left: 50px;
-    margin-top: 100px;
+    margin-left: 3%;
+    margin-top: 5%;
     outline-color: wheat;
     outline-style: dashed;
     background: transparent;
@@ -232,7 +243,7 @@ i.logoid {
 }
 
 p.ex1 {
-    margin-left: 20px;
+    margin-left: 25px;
     margin-bottom: 0px;
     font-size: 40px;
     color: wheat;
