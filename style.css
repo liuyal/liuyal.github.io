@@ -105,7 +105,7 @@ p.p_main{
     padding: 10px 20px;*/
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    color: wheat;
+    color: white;
     font-size: 100%;
     padding-bottom: 0%;
 }
@@ -167,7 +167,7 @@ p.ex2-1 {
     margin-bottom: 25px;
     margin-left: 20px;
     font-size: 25px;
-    color: wheat;
+    color: white;
     font-weight: lighter;
     font-family: "Roboto Slab", sans-serif;
     text-align: justify;
@@ -184,7 +184,7 @@ p.ex2-2 {
     height: 145px;
     text-align: justify;
 
-    color: wheat;
+    color: white;
     font-family: "Yantramanav", sans-serif;
     align-content: left;
 }
@@ -197,7 +197,7 @@ p.ex2-3 {
     font-size: 24px;
     height: 340px;
     text-align: justify;
-    color: wheat;
+    color: white;
     font-family: "Yantramanav", sans-serif;
     text-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.25);
 }
@@ -226,7 +226,7 @@ p.ex2-3 {
     width: 450px;
     margin-left: 3%;
     margin-top: 5%;
-    outline-color: wheat;
+    outline-color: white;
     outline-style: dashed;
     background: transparent;
     box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.25);
@@ -235,7 +235,7 @@ p.ex2-3 {
 i.logoid {
     font-size: 45px;
     width: 45px;
-    color: wheat;
+    color: white;
     margin-left: 1px;
     margin-bottom: 8px;
     vertical-align: text-bottom;
@@ -246,7 +246,7 @@ p.ex1 {
     margin-left: 25px;
     margin-bottom: 0px;
     font-size: 40px;
-    color: wheat;
+    color: white;
     font-weight: bold;
     font-family: "Indie Flower", sans-serif;
     text-align: left;
@@ -258,7 +258,7 @@ p.P_info {
     font-weight: 0px;
     margin: 0px 0px 0px 10px;
     font-size: 37px;
-    color: wheat;
+    color: white;
 }
 
 @media(max-width: 786px) {
