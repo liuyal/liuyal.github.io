@@ -109,8 +109,8 @@
     -ms-transform: translateY(-100%);
     transform: translateY(-100%);
     
-    -webkit-transition: all 0.6 ease-out 2.5s;
-    transition: all 0.6s  ease-out 2.5s;
+    -webkit-transition: all 0.6 ease-out 2.3s;
+    transition: all 0.6s  ease-out 2.3s;
 }
 
 .no-js #loader-wrapper {

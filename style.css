@@ -111,8 +111,9 @@ p.p_main{
 }
 
 #list .highlighted{
-    border-top: solid #FFF;
-    border-top-width: 4px
+    border-bottom: solid #FFF;
+    border-bottom-width: 3px;
+    padding-bottom: 0px;
 }
 
 .portfolio {
