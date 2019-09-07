@@ -1,4 +1,3 @@
-
 /* ==========================================================================
    Chrome Frame prompt
    ========================================================================== */
@@ -21,166 +20,98 @@
     width: 100%;
     height: 100%;
     z-index: 1000;
-}
-
-#loader {
-    display: block;
-    position: relative;
-    left: 50%;
-    top: 50%;
-    width: 150px;
-    height: 150px;
-    margin: -75px 0 0 -75px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: #fff;
-
-    -webkit-animation: spin 2s linear infinite;
-    /* Chrome, Opera 15+, Safari 5+ */
-    animation: spin 2s linear infinite;
-    /* Chrome, Firefox 16+, IE 10+, Opera */
-    z-index: 1001;
-}
-
-#loader:before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: #fff;
-
-    -webkit-animation: spin 3s linear infinite;
-    /* Chrome, Opera 15+, Safari 5+ */
-    animation: spin 3s linear infinite;
-    /* Chrome, Firefox 16+, IE 10+, Opera */
-}
-
-#loader:after {
-    content: "";
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: #fff;
-
-    -webkit-animation: spin 1.5s linear infinite;
-    /* Chrome, Opera 15+, Safari 5+ */
-    animation: spin 1.5s linear infinite;
-    /* Chrome, Firefox 16+, IE 10+, Opera */
-}
-
-@-webkit-keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-        /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(0deg);
-        /* IE 9 */
-        transform: rotate(0deg);
-        /* Firefox 16+, IE 10+, Opera */
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-        /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(360deg);
-        /* IE 9 */
-        transform: rotate(360deg);
-        /* Firefox 16+, IE 10+, Opera */
-    }
-}
-
-@keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-        /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(0deg);
-        /* IE 9 */
-        transform: rotate(0deg);
-        /* Firefox 16+, IE 10+, Opera */
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-        /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(360deg);
-        /* IE 9 */
-        transform: rotate(360deg);
-        /* Firefox 16+, IE 10+, Opera */
-    }
-}
-
-#loader-wrapper .loader-section {
-    position: fixed;
-    top: 0;
-    width: 51%;
-    height: 100%;
     background: #000;
-    z-index: 1000;
-    -webkit-transform: translateX(0);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: translateX(0);
-    /* IE 9 */
-    transform: translateX(0);
-    /* Firefox 16+, IE 10+, Opera */
 }
 
-#loader-wrapper .loader-section.section-left {
-    left: 0;
+.sk-wave {
+    margin: 13% auto;
+    width: 500px;
+    height: 80px;
+    text-align: center;
+    font-size: 150px;
+    z-index: 2000;
 }
 
-#loader-wrapper .loader-section.section-right {
-    right: 0;
+.sk-wave .sk-rect {
+    background-color: #fff;
+    height: 500px;
+    width: 20px;
+    display: inline-block;
+    -webkit-animation: sk-waveStretchDelay 1.6s infinite ease-in-out;
+    animation: sk-waveStretchDelay 1.6s infinite ease-in-out;
 }
 
-/* Loaded */
-
-.loaded #loader-wrapper .loader-section.section-left {
-    -webkit-transform: translateX(-100%);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: translateX(-100%);
-    /* IE 9 */
-    transform: translateX(-100%);
-    /* Firefox 16+, IE 10+, Opera */
-    -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+.sk-wave .sk-rect1 {
+    -webkit-animation-delay: -1.2s;
+    animation-delay: -1.2s;
 }
 
-.loaded #loader-wrapper .loader-section.section-right {
-    -webkit-transform: translateX(100%);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: translateX(100%);
-    /* IE 9 */
-    transform: translateX(100%);
-    /* Firefox 16+, IE 10+, Opera */
-    -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+.sk-wave .sk-rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
 }
 
-.loaded #loader {
+.sk-wave .sk-rect3 {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+}
+
+.sk-wave .sk-rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+.sk-wave .sk-rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-waveStretchDelay {
+
+    0%,
+    40%,
+    100% {
+        -webkit-transform: scaleY(0.4);
+        transform: scaleY(0.4);
+    }
+
+    20% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+
+@keyframes sk-waveStretchDelay {
+
+    0%,
+    40%,
+    100% {
+        -webkit-transform: scaleY(0.4);
+        transform: scaleY(0.4);
+    }
+
+    20% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+
+.loaded .sk-wave {
     opacity: 0;
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.6s ease-out 1.7s;
+    transition: all 0.4s ease-out 1.7s;
 }
 
 .loaded #loader-wrapper {
     visibility: hidden;
-
+    
     -webkit-transform: translateY(-100%);
-    /* Chrome, Opera 15+, Safari 3.1+ */
     -ms-transform: translateY(-100%);
-    /* IE 9 */
     transform: translateY(-100%);
-    /* Firefox 16+, IE 10+, Opera */
-    -webkit-transition: all 0.3s 1s ease-out;
-    transition: all 0.3s 1s ease-out;
+    
+    -webkit-transition: all 0.6 ease-out 2.5s;
+    transition: all 0.6s  ease-out 2.5s;
 }
-
-/* JavaScript Turned Off */
 
 .no-js #loader-wrapper {
     display: none;
@@ -190,12 +121,6 @@
     color: #222222;
 }
 
-#content {
-    margin: 0 auto;
-    padding-bottom: 50px;
-    width: 80%;
-    max-width: 978px;
-}
 
 /* ==========================================================================
    Helper classes
@@ -337,11 +262,11 @@
     }
 
     a[href]:after {
-        content: " (" attr(href) ")";
+        content: " ("attr(href) ")";
     }
 
     abbr[title]:after {
-        content: " (" attr(title) ")";
+        content: " ("attr(title) ")";
     }
 
     /*
