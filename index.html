@@ -3,16 +3,6 @@
 
 <head>
     <script src="js/main.js"></script>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/waypoints.js"></script>
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>
-        window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')
-    </script>
 
     <link rel="stylesheet" type="text/css" href="css/section.css">
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
@@ -29,42 +19,24 @@
 
 <body class="main">
 
-    <!--
-    <div id="demo-content">
-        <div id="loader-wrapper">
-            <div class="sk-wave">
-                <div class="sk-rect sk-rect1"></div>
-                <div class="sk-rect sk-rect2"></div>
-                <div class="sk-rect sk-rect3"></div>
-                <div class="sk-rect sk-rect4"></div>
-                <div class="sk-rect sk-rect5"></div>
-            </div>
-        </div>
-    </div>
--->
-
     <section class="home_section" id="home">
         <div class="wrapper">
-            <header>
-                <nav class="topnav" id="navbar">
-                    <div class="navlogo"><img id="fadeIn" src="images/logo_w.png" height="45"></div>
-                    <div class="menu-icon"> <i class="fa fa-bars fa-2x"></i> </div>
-
-                    <div class="menu">
-                        <ul id="list">
-                            <li><a href="#home" class="button hvr-underline-from-center">Home</a></li>
-                            <li><a href="#about" class="button hvr-underline-from-center">About</a></li>
-                            <li><a href="#portfolio" class="button hvr-underline-from-center">Portfolio</a></li>
-                            <li><a href="#contact" class="button hvr-underline-from-center">Contact</a></li>
-                        </ul>
-                    </div>
-                </nav>
+            <header class="header" id="navbar">
+                    <a href="/" class="logo"><img src="images/logo_w.png" height="45"></a>
+                    <input class="menu-btn" type="checkbox" id="menu-btn" />
+                    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+                    <ul class="menu">
+                        <li><a href="#home" class="button hvr-underline-from-center">Home</a></li>
+                        <li><a href="#about" class="button hvr-underline-from-center">About</a></li>
+                        <li><a href="#portfolio" class="button hvr-underline-from-center">Portfolio</a></li>
+                        <li><a href="#contact" class="button hvr-underline-from-center">Contact</a></li>
+                    </ul>
             </header>
         </div>
 
     </section>
-    
-    
+
+
     <section class="about_section" id="about">
     </section>
 
