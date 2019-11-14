@@ -2,32 +2,34 @@
 <html>
 
 <head>
+    <script src="js/main.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <script src="js/jquery.waypoints.min.js" type="text/javascript"></script>
-    <script src="js/waypoints.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/waypoints.js"></script>
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')
+    </script>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="css/sk-wave.css">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet" />
-    <link href="css/waypoints.css" rel="stylesheet" />
-    <link href="css/hover.css" rel="stylesheet" media="all">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link href="css/preload.css" rel="text/css">
+    <link rel="stylesheet" type="text/css" href="css/section.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="css/hover.css">
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
 
-<body class="demo">
+<body class="main">
+
+    <!--
     <div id="demo-content">
         <div id="loader-wrapper">
             <div class="sk-wave">
@@ -39,21 +41,14 @@
             </div>
         </div>
     </div>
+-->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>
-        window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')
-
-    </script>
-    <script src="js/main.js"></script>
-
-    <section class="intro section" id="section1">
+    <section class="home_section" id="section1">
         <div class="wrapper">
             <header>
-                <nav id="logoJL">
+                <nav class="topnav" id="navbar">
+                    <div class="navlogo"><img id="fadeIn" src="images/logo_w.png" height="45"></div>
                     <div class="menu-icon"> <i class="fa fa-bars fa-2x"></i> </div>
-
-                    <div class="logo"><img id="fadeIn" src="images/logo_w.png" height="50"></div>
 
                     <div class="menu">
                         <ul id="list">
@@ -65,39 +60,22 @@
                     </div>
                 </nav>
             </header>
-
-        </div>
-
-        <div class="wrapper2">
-            <p class="down_button"></p>
         </div>
 
     </section>
 
 
 
-    <section class="portfolio section" id="section2">
-        <div class="main">
-            <p class="p_main">Coming Soon</p>
-        </div>
+    <section class="portfolio_section" id="section2">
     </section>
 
 
-
-    <section class="about section" id="section3">
-        <div class="inner"></div>
-        <div class="contentAM">
-            <p class="ex2-0">.</p>
-            <p class="ex2-1">About</p>
-            <p id="messenger" class="ex2-2"></p>
-            <p id="messenger2" class="ex2-3"></p>
-        </div>
+    <section class="about_section" id="section3">
     </section>
 
-
-    <section class="tail section" id="section4">
+    <section class="contact_section" id="section4">
         <div class="inner">
-            <div class="content" id="contact">
+            <div class="contact_content" id="contact">
                 <p class="ex1">Contact info</p>
                 <p class="P_info"> <i class="logoid material-icons">&#xe0c8;</i> Vancouver, BC, Canada</p>
                 <p class="P_info"> <i class="logoid material-icons">&#xe0b0;</i> 778-257-2868</p>
@@ -109,6 +87,4 @@
 
 
 
-</body>
-
-</html>
+</body></html>
