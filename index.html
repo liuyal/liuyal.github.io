@@ -3,14 +3,19 @@
 
 <head>
     <script src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/01f65a8d74.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="css/section.css">
-    <link rel="stylesheet" type="text/css" href="css/navbar.css">
-    <link rel="stylesheet" type="text/css" href="css/hover.css">
-    <link rel="stylesheet" type="text/css" href="css/contact.css">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/section.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hover.css">
+    <link rel="stylesheet" href="css/contact.css">
+
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -22,15 +27,15 @@
     <section class="home_section" id="home">
         <div class="wrapper">
             <header class="header" id="navbar">
-                    <a href="/" class="logo"><img src="images/logo_w.png" height="45"></a>
-                    <input class="menu-btn" type="checkbox" id="menu-btn" />
-                    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-                    <ul class="menu">
-                        <li><a href="#home" class="button hvr-underline-from-center">Home</a></li>
-                        <li><a href="#about" class="button hvr-underline-from-center">About</a></li>
-                        <li><a href="#portfolio" class="button hvr-underline-from-center">Portfolio</a></li>
-                        <li><a href="#contact" class="button hvr-underline-from-center">Contact</a></li>
-                    </ul>
+                <a href="/" class="logo"><img src="images/logo_w.png" height="45"></a>
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+                <ul class="menu">
+                    <li><a href="#home" class="button hvr-underline-from-center">Home</a></li>
+                    <li><a href="#about" class="button hvr-underline-from-center">About</a></li>
+                    <li><a href="#portfolio" class="button hvr-underline-from-center">Portfolio</a></li>
+                    <li><a href="#contact" class="button hvr-underline-from-center">Contact</a></li>
+                </ul>
             </header>
         </div>
 
@@ -46,17 +51,51 @@
 
 
     <section class="contact_section" id="contact">
-        <div class="inner">
-            <div class="contact_content">
-                <p class="ex1">Contact info</p>
-                <p class="P_info"> <i class="logoid material-icons">&#xe0c8;</i> Vancouver, BC, Canada</p>
-                <p class="P_info"> <i class="logoid material-icons">&#xe0b0;</i> 778-257-2868</p>
-                <p class="P_info"> <i class="logoid material-icons">&#xe0be;</i> Jerrylarryliu@gmail.com</p>
-                <p class="P_info"> <i class="logoid fa">&#xf113;</i> <a href="https://github.com/liuyal" style="color:white;text-decoration:none">Github.com/liuyal</a> </p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-map-marked-alt text-primary mb-3" id="fas_font"></i>
+                            <h4 class="text-uppercase m-0">Address</h4>
+                            <hr class="my-4">
+                            <div class="medium text-black-50">Vancouver, BC, Canada</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-envelope text-primary mb-3" id="fas_font"></i>
+                            <h4 class="text-uppercase m-0">Email</h4>
+                            <hr class="my-4">
+                            <div class="medium text-black-50">Jerrylarryliu@gmail.com</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-mobile-alt text-primary mb-3" id="fas_font"></i>
+                            <h4 class="text-uppercase m-0">Phone</h4>
+                            <hr class="my-4">
+                            <div class="medium text-black-50">(778) 257-2868</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social d-flex justify-content-center">
+                <a href="https://github.com/liuyal" class="mx-2">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/liuyal/" class="mx-2">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
             </div>
         </div>
     </section>
-
-
 
 </body></html>

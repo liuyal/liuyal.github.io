@@ -1,41 +1,61 @@
 
-.contact_content {
-    position: static;
-    height: 285px;
-    width: 450px;
-    margin-left: 3%;
-    margin-top: 5%;
-    outline-color: white;
-    outline-style: dashed;
-    background: transparent;
-    box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.25);
+.contact_section {
+    background: url('../images/contact.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    display: table;
+    position: relative;
+    border: none !important;
+    padding: 34rem 0rem 0rem;
 }
 
-i.logoid {
-    font-size: 45px;
-    width: 45px;
-    color: white;
-    margin-left: 1px;
-    margin-bottom: 8px;
-    vertical-align: text-bottom;
-    align-content: center;
+.contact_section .card {
+    border: 0;
+    border-bottom: 0.25rem solid #64a19d;
 }
 
-p.ex1 {
-    margin-left: 25px;
-    margin-bottom: 0px;
-    font-size: 40px;
-    color: white;
-    font-weight: bold;
-    font-family: "Indie Flower", sans-serif;
-    text-align: left;
-    align-content: left;
+.contact_section .card h4 {
+    font-size: 1rem;
+    font-family: 'Varela Round';
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
 }
 
-p.P_info {
-    font-family: "Indie Flower", sans-serif;
-    font-weight: 0px;
-    margin: 0px 0px 0px 10px;
-    font-size: 37px;
-    color: white;
+.contact_section .card hr {
+    border-color: #64a19d;
+    border-width: 0.25rem;
+    width: 5rem;
+}
+
+.contact_sections.social {
+    margin-top: 15rem;
+}
+
+.contact_section .social a {
+    text-align: center;
+    height: 3rem;
+    width: 3rem;
+    margin: 5rem;
+    font-size: 30px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 100%;
+    line-height: 3rem;
+    color: rgba(255, 255, 255, 1);
+}
+
+.contact_section .social a:hover {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.contact_section .social a:active {
+    color: #fff;
+}
+
+#fas_font {
+    color: #64a19d;
+    font-size: 1.5em;
 }
