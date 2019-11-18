@@ -19,10 +19,10 @@
 .header li a {
     color: #fff;
     display: block;
-    width: 150px;
+    width: 175px;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: normal;
     text-align: center;
     text-transform: uppercase;
@@ -34,7 +34,7 @@
 .header .logo {
     position: fixed;
     line-height: 0px;
-    margin: 0.35%;
+    margin: 0.60%;
 }
 
 /* menu */
@@ -110,6 +110,11 @@
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
+}
+
+#list .active {
+    color: goldenrod;
+    text-align: center;
 }
 
 /* 48em = 768px */
