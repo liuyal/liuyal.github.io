@@ -15,7 +15,7 @@
 
 .contact_section .card {
     border: 0;
-    border-bottom: 0.25rem solid #64a19d;
+    border-bottom: 0.35rem solid #64a19d;
 }
 
 .contact_section .card h4 {
@@ -39,7 +39,7 @@
     text-align: center;
     height: 3rem;
     width: 3rem;
-    margin: 5rem;
+    margin: 4rem;
     font-size: 30px;
     background: rgba(255, 255, 255, 0.5);
     border-radius: 100%;

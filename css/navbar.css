@@ -19,12 +19,12 @@
 .header li a {
     color: #fff;
     display: block;
-    padding: 20px 20px;
-/*    border-right: 1px solid #f4f4f4;*/
+    width: 150px;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 17px;
     font-weight: normal;
+    text-align: center;
     text-transform: uppercase;
 }
 
