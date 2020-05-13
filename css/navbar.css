@@ -34,7 +34,7 @@
 .header .logo {
     position: fixed;
     line-height: 0px;
-    margin: 0.60%;
+    margin: 10px;
 }
 
 /* menu */
@@ -63,7 +63,7 @@
     height: 2px;
     position: relative;
     transition: background .2s ease-out;
-    width: 18px;
+    width: 25px;
 }
 
 .header .menu-icon .navicon:before,
@@ -122,12 +122,11 @@
 @media (min-width: 48em) {
     .header li {
         float: left;
-        
     }
 
     .header li a {
         padding: 20px 30px;
-        
+
     }
 
     .header .menu {
@@ -139,4 +138,20 @@
     .header .menu-icon {
         display: none;
     }
+}
+
+
+@media (max-width: 48em) {
+
+    .header li a {
+        height: 30px;
+        margin: 10px;
+
+    }
+
+    .header .menu {
+        float: right;
+        height: 180px;
+    }
+
 }
