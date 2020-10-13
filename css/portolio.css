@@ -16,7 +16,7 @@
 }
 
 .portoflio_wrapper2:hover {
-    transition: 0.3s;
+    transition: 0.2s;
     opacity: 1;
     border: 3px solid white;
     backdrop-filter: blur(3px);
