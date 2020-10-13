@@ -1,9 +1,25 @@
 .portoflio_wrapper {
     height: 100%;
-    text-align: center;
-    margin-top: 20%;
-    vertical-align: baseline;
+    position: relative;
+    border: 0px solid green;
+}
 
+.portoflio_wrapper2 {
+    margin: 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border: 0px solid white;
+    opacity: 0.85;
+}
+
+.portoflio_wrapper2:hover {
+    transition: 0.3s;
+    opacity: 1;
+    border: 3px solid white;
+    backdrop-filter: blur(3px);
 }
 
 .portfolio_button {
@@ -11,20 +27,11 @@
     border-color: transparent;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    color: wheat;
-
+    color: white;
     font-size: 42px;
     transition: all 0.5s;
-    padding: 60px;
+    padding: 50px;
     width: 400px;
-
-    border: none;
-    outline: none;
-}
-
-.portfolio_button:focus {
-    border: none;
-    outline: none;
 }
 
 .portfolio_button span {
@@ -33,10 +40,14 @@
     position: relative;
     transition: 0.5s;
     font-size: 42px;
+    opacity: 100%;
 }
+
 
 .portfolio_button:hover span {
     padding-right: 30px;
+    opacity: 100%;
+
 }
 
 
@@ -49,10 +60,10 @@
     top: 0;
     right: -50px;
     transition: 0.5s;
+
 }
 
 .portfolio_button:hover span:after {
     opacity: 1;
     right: 0;
-
 }

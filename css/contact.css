@@ -1,17 +1,5 @@
 
-.contact_section {
-    background: url('../images/contact.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center; 
-    height: 100%;
-    width: 100%;
-    margin: auto;
-    display: table;
-    position: relative;
-    border: none !important;
-    padding: 34rem 0rem 0rem;
-}
+
 
 .contact_section .card {
     border: 0;

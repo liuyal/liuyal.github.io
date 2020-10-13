@@ -16,9 +16,9 @@ body {
 
 .home_section {
     background: url('../images/home.jpg');
-    background-size: cover; 
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center; 
+    background-position: center center;
     height: 100%;
     width: 100%;
     margin: auto;
@@ -31,7 +31,7 @@ body {
     background: url('../images/about.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center; 
+    background-position: center center;
     height: 100%;
     width: 100%;
     margin: auto;
@@ -44,6 +44,19 @@ body {
     background: url('../images/portfolio.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    border: none !important;
+
+}
+
+.contact_section {
+    background: url('../images/contact.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center center; 
     height: 100%;
     width: 100%;
@@ -51,5 +64,5 @@ body {
     display: table;
     position: relative;
     border: none !important;
+    padding: 34rem 0rem 0rem;
 }
-
