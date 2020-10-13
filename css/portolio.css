@@ -1,14 +1,10 @@
-#portoflio_wrapper {
-    width: 98%;
+.portoflio_wrapper {
     height: 100%;
-    margin-left: 2%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    outline: none;
-}
+    text-align: center;
+    margin-top: 20%;
+    vertical-align: baseline;
 
+}
 
 .portfolio_button {
     background-color: transparent;
@@ -16,10 +12,12 @@
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     color: wheat;
+
     font-size: 42px;
     transition: all 0.5s;
     padding: 60px;
     width: 400px;
+
     border: none;
     outline: none;
 }
@@ -56,16 +54,5 @@
 .portfolio_button:hover span:after {
     opacity: 1;
     right: 0;
-    
+
 }
-
-
-
-
-
-
-
-
-
-
-
