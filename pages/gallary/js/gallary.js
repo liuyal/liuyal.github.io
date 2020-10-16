@@ -68,6 +68,8 @@ function request_github_data() {
 
         dates["2021"] = {};
         dates["2022"] = {};
+        dates["2023"] = {};
+        dates["2024"] = {};
 
         var years = Object.keys(dates);
         var i;
@@ -75,51 +77,57 @@ function request_github_data() {
 
             if (i == 0) {
 
-                document.getElementById("default_tab").innerHTML = years[0];
-                document.getElementById("default_tab").href = "#" + years[0];
-                document.getElementById("tab_0").id = "tab_" + years[0];
+                document.getElementById("li_0").id = "li_" + years[0];
+                document.getElementById("tab_0").innerHTML = years[0];
+                document.getElementById("tab_0").href = "#" + years[0];
+                document.getElementById("tab_0").classList.add("active");
 
             } else {
 
                 var li_node = document.createElement("LI");
-                var clone = document.getElementById("default_tab");
-                var pill_node = clone.cloneNode(true);
-                
-                pill_node.innerHTML = years[i];
-                pill_node.id = "pill_" + years[i];
-                pill_node.href = "#" + years[i];
+                var clone = document.getElementById("tab_0");
+                var tab_node = clone.cloneNode(true);
 
-                li_node.appendChild(pill_node);
-                li_node.id = "tab_" + years[i];
-                li_node.onclick = function() { load_months(this.id) };
+                tab_node.innerHTML = years[i];
+                tab_node.id = "tab_" + years[i];
+                tab_node.href = "#" + years[i];
+                tab_node.classList.remove("active");
+
+                li_node.appendChild(tab_node);
+                li_node.id = "li_" + years[i];
+                li_node.onclick = function () {
+                    load_months(this.id)
+                };
 
                 document.getElementById("nav_pills").appendChild(li_node);
-
             }
-
         }
 
-       
+        document.getElementById("tab_0").id = "tab_" + years[0];
+
+
+        // Load images
 
     });
-
 }
+
 
 function check_data() {
-    console.log(dates["2020"]);
-}
-
-function load_months(year) {
-    console.log(year);
     console.log(dates);
 }
 
 
+function load_months(year) {
 
+    var elems = document.querySelectorAll(".nav-link");
 
+    [].forEach.call(elems, function (el) {
+        el.classList.remove("active");
+    });
 
+    var current_tab = "tab_" + year.split("_")[1];
+    var months = Object.keys(dates[year.split("_")[1]]).sort();
 
+    document.getElementById(current_tab).classList.add("active");
 
-
-
-
+}

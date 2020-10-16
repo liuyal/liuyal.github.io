@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500');
+
+/* Body Styles */
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+/*    background-color: rgb(37, 41, 46);*/
+}

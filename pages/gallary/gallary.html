@@ -2,15 +2,18 @@
 <html>
 
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/gallary.js"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/gallary.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/gallary.css">
+    <link rel="stylesheet" href="css/gallary_body.css">
 
 </head>
 
@@ -23,26 +26,32 @@
 
 
 
-    <div class="container-fluid">
-        
-        
+    <div class="container-fluid" id="nav_pills_container">
+
         <ul class="nav nav-pills" id="nav_pills">
-            
-            <li class="active" onclick="load_months(this.id)" id="tab_0">
-                <a id="default_tab" data-toggle="pill" href="#0">0000</a>
+
+            <li class="nav-item" id="li_0" onclick="load_months(this.id)">
+
+                <a class="nav-link" id="tab_0" href="#0">0000</a>
+
             </li>
-            
         </ul>
 
-        
-        
-        <div class="tab-content">
-            <div id="tab_content" class="tab-pane fade in active">
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                One of three columns
+            </div>
+            <div class="col-sm">
+                One of three columns
+            </div>
+            <div class="col-sm">
+                One of three columns
             </div>
         </div>
-
-        
-        
     </div>
 
 
