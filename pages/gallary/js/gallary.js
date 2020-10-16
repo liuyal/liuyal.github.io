@@ -77,6 +77,7 @@ function request_github_data() {
 
                 document.getElementById("default_tab").innerHTML = years[0];
                 document.getElementById("default_tab").href = "#" + years[0];
+                document.getElementById("tab_0").id = "tab_" + years[0];
 
             } else {
 
@@ -85,20 +86,20 @@ function request_github_data() {
                 var pill_node = clone.cloneNode(true);
                 
                 pill_node.innerHTML = years[i];
-                pill_node.id = years[i];
+                pill_node.id = "pill_" + years[i];
                 pill_node.href = "#" + years[i];
 
                 li_node.appendChild(pill_node);
+                li_node.id = "tab_" + years[i];
+                li_node.onclick = function() { load_months(this.id) };
 
                 document.getElementById("nav_pills").appendChild(li_node);
 
             }
 
-             console.log(years[i]);
         }
 
        
-
 
     });
 
@@ -108,6 +109,17 @@ function check_data() {
     console.log(dates["2020"]);
 }
 
-function load_months() {
-    console.log(dates["2020"]);
+function load_months(year) {
+    console.log(year);
+    console.log(dates);
 }
+
+
+
+
+
+
+
+
+
+
