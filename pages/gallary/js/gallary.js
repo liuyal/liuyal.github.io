@@ -1,3 +1,5 @@
+var dates = {};
+
 function doCORSRequest(options, printResult) {
     var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
     var x = new XMLHttpRequest();
@@ -5,18 +7,18 @@ function doCORSRequest(options, printResult) {
     x.onload = x.onerror = function () {
         printResult(x.responseText);
     };
-    
+
     if (/^POST/i.test(options.method)) {
         x.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     }
     x.send(options.data);
 }
 
+
 function request_github_data() {
-    
+
     let raw_url = "https://raw.githubusercontent.com/liuyal/SpotLightSaver/master/";
     let repo_tree_url = "https://api.github.com/repos/liuyal/SpotLightSaver/git/trees/master?recursive=1";
-    var dates = {};
 
     doCORSRequest({
         method: 'GET',
@@ -58,18 +60,29 @@ function request_github_data() {
                     if (!(month in dates[year])) {
                         dates[year][month] = {};
                     }
-
+                    
                     dates[year][month][date_label].push(raw_url + '/' + data[i]["path"]);
-
-
                 }
             }
-
-
         }
-        console.log(dates);
     });
 
-
-
 }
+
+function check_data() {
+    
+    
+    console.log(dates["2020"]);
+    
+}
+
+
+
+
+
+
+
+
+
+
+
