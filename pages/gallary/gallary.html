@@ -25,25 +25,24 @@
 
     <div class="container-fluid">
         
-        <ul class="nav nav-pills">
-            <li class="active"><a data-toggle="pill" href="#0001">0001</a></li>
-            <li><a data-toggle="pill" href="#0002">0002</a></li>
+        
+        <ul class="nav nav-pills" id="nav_pills">
+            
+            <li class="active" onclick="load_months()">
+                <a id="default_tab" data-toggle="pill" href="#0">0000</a>
+            </li>
+            
         </ul>
 
+        
+        
         <div class="tab-content">
-
-            <div id="0001" class="tab-pane fade in active">
-                <h3>1</h3>
-                <p>content 1</p>
+            <div id="tab_content" class="tab-pane fade in active">
             </div>
-
-            <div id="0002" class="tab-pane fade">
-                <h3>2</h3>
-                <p>content 2</p>
-            </div>
-
         </div>
 
+        
+        
     </div>
 
 
