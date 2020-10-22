@@ -66,10 +66,8 @@ function request_github_data() {
             }
         }
 
-        dates["2021"] = {};
-        dates["2022"] = {};
-        dates["2023"] = {};
-        dates["2024"] = {};
+        dates["2021"] = {}; //test
+        dates["2022"] = {}; //test
 
         var years = Object.keys(dates);
         var i;
@@ -104,9 +102,11 @@ function request_github_data() {
         }
 
         document.getElementById("tab_0").id = "tab_" + years[0];
-
-
+        load_months("li_" + years[0]);
+        
         // Load images
+
+        
 
     });
 }
@@ -119,15 +119,29 @@ function check_data() {
 
 function load_months(year) {
 
+    var month_list = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
+
     var elems = document.querySelectorAll(".nav-link");
+    var current_tab = "tab_" + year.split("_")[1];
+    var months = Object.keys(dates[year.split("_")[1]]).sort();
 
     [].forEach.call(elems, function (el) {
         el.classList.remove("active");
     });
 
-    var current_tab = "tab_" + year.split("_")[1];
-    var months = Object.keys(dates[year.split("_")[1]]).sort();
-
     document.getElementById(current_tab).classList.add("active");
+
+    var i;
+    for (i = 0; i < month_list.length; i++) {
+        var box = document.getElementById("m" + month_list[i]);
+        if (months.includes(month_list[i])) {
+             box.style.backgroundColor = "LightGreen";
+        } else {
+             box.style.backgroundColor = "LightGray";
+        }
+
+    }
+    console.log(year)
+
 
 }
