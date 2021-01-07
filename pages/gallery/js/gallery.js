@@ -66,9 +66,6 @@ function request_github_data() {
             }
         }
 
-        dates["2021"] = {}; //test
-        dates["2022"] = {}; //test
-
         var years = Object.keys(dates);
         var i;
         for (i = 0; i < years.length; i++) {
@@ -105,8 +102,6 @@ function request_github_data() {
         load_months("li_" + years[0]);
         
         // Load images
-
-        
 
     });
 }

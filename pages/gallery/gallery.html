@@ -10,7 +10,8 @@
     <script src="js/gallery.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/gallery.css">
     <link rel="stylesheet" href="css/gallery_body.css">
@@ -21,24 +22,19 @@
 
 
     <div class="title_block">
-        <button class="btn" onclick=check_data()><span>Spotlight Gallery</span></button>
+        <button class="back_btn fas fa-home" onclick="location.href='../portfolio/portfolio_page.html'"><span></span></button>
+        <button class="test_btn" onclick=check_data()><span>Spotlight Gallery</span></button>
     </div>
-
 
 
     <div class="container-fluid" id="nav_pills_container">
-
         <ul class="nav nav-pills" id="nav_pills">
-
             <li class="nav-item" id="li_0" onclick="load_months(this.id)">
-
                 <a class="nav-link" id="tab_0" href="#0">0000</a>
-
             </li>
         </ul>
-
-
     </div>
+    
 
     <div class="container-fluid ">
         <div class="content_wrapper">
@@ -55,6 +51,7 @@
                 04
             </div>
         </div>
+        
         <div class="content_wrapper">
             <div class="content_box" id="m05">
                 05
@@ -69,6 +66,7 @@
                 08
             </div>
         </div>
+        
         <div class="content_wrapper">
             <div class="content_box" id="m09">
                 09
