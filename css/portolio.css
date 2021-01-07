@@ -8,7 +8,7 @@
     margin: 0;
     position: absolute;
     top: 45%;
-    left: 50%;
+    left: 25%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     border: 0px solid white;
@@ -67,4 +67,12 @@
 .portfolio_button:hover span:after {
     opacity: 1;
     right: 0;
+}
+
+@media (max-width: 48em) {
+
+    .portoflio_wrapper2 {
+        top: 25%;
+        left: 50%;
+    }
 }
