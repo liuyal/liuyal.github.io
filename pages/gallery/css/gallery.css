@@ -62,7 +62,7 @@
 }
 
 .photo_div {
-    margin: 30px 15px 20px 15px;
+    margin: 15px 17px 10px 17px;
     border: none;
     height: 3px;
     color: #4CAF50;
@@ -96,8 +96,7 @@
 .row {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 4px;
-    margin: 15px;
+    margin: 13px;
 }
 
 /* Create four equal columns that sits next to each other */
