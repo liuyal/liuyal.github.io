@@ -206,7 +206,7 @@ function load_months(year) {
         } else {
             box.style.backgroundColor = "LightGray";
         }
-        box.textContent = "";
+//        box.textContent = "";
     }
     this.global_year = year;
 }
