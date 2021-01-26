@@ -154,7 +154,7 @@ function load_images() {
             counter = 0;
             flag = !flag;
         }
-        
+
         if (flag) {
             if (i % 2 > 0) {
                 temp_image.src = images_pi[im_index];
@@ -182,6 +182,8 @@ function load_images() {
 function load_months(year) {
 
     var month_list = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
+    var month_name = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
     var elems = document.querySelectorAll(".nav-link");
     var current_tab = "tab_" + year.split("_")[1];
     var months = Object.keys(global_dates[year.split("_")[1]]).sort();
@@ -197,7 +199,7 @@ function load_months(year) {
         var box = document.getElementById("m" + month_list[i]);
         if (months.includes(month_list[i])) {
             box.style.backgroundColor = "LightGreen";
-
+            box.style.backgroundImage = "";
             box.addEventListener('click', function (event) {
                 load_data();
                 window.location.replace("./gallery_month.html");
@@ -206,7 +208,7 @@ function load_months(year) {
         } else {
             box.style.backgroundColor = "LightGray";
         }
-//        box.textContent = "";
+        box.textContent = month_name[i];
     }
     this.global_year = year;
 }
