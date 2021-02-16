@@ -3,7 +3,8 @@ var global_year = "";
 var global_month = "";
 
 function doCORSRequest(options, printResult) {
-    var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
+//    var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
+    var cors_api_url = 'https://glacial-garden-64110.herokuapp.com/';
     var x = new XMLHttpRequest();
     x.open(options.method, cors_api_url + options.url);
     x.onload = x.onerror = function () {
