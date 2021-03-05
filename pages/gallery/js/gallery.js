@@ -3,7 +3,6 @@ var global_year = "";
 var global_month = "";
 
 function doCORSRequest(options, printResult) {
-//    var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
     var cors_api_url = 'https://glacial-garden-64110.herokuapp.com/';
     var x = new XMLHttpRequest();
     x.open(options.method, cors_api_url + options.url);
@@ -66,37 +65,50 @@ function request_github_data() {
             }
         }
 
-        var years = Object.keys(global_dates);
-        var i;
-        for (i = 0; i < years.length; i++) {
+        set_ui();
 
-            if (i == 0) {
-                document.getElementById("li_0").id = "li_" + years[0];
-                document.getElementById("tab_0").innerHTML = years[0];
-                document.getElementById("tab_0").href = "#" + years[0];
-                document.getElementById("tab_0").classList.add("active");
-            } else {
-
-                var li_node = document.createElement("LI");
-                var clone = document.getElementById("tab_0");
-                var tab_node = clone.cloneNode(true);
-
-                tab_node.innerHTML = years[i];
-                tab_node.id = "tab_" + years[i];
-                tab_node.href = "#" + years[i];
-                tab_node.classList.remove("active");
-
-                li_node.appendChild(tab_node);
-                li_node.id = "li_" + years[i];
-                li_node.onclick = function () {
-                    load_months(this.id)
-                };
-                document.getElementById("nav_pills").appendChild(li_node);
-            }
-        }
-        document.getElementById("tab_0").id = "tab_" + years[0];
-        load_months("li_" + years[0]);
     });
+
+
+}
+
+
+function set_ui() {
+
+    var years = Object.keys(global_dates);
+    year = window.location.href.split("#").pop()
+
+    if (year.includes(".html")) {
+        year = years[0];
+    }
+
+    document.getElementById("li_0").id = "li_" + years[0];
+    document.getElementById("tab_0").innerHTML = years[0];
+    document.getElementById("tab_0").href = "#" + years[0];
+    document.getElementById("tab_0").classList.remove("hide");
+    document.getElementById("tab_0").classList.remove("active");
+
+    var i;
+    for (i = 1; i < years.length; i++) {
+
+        var li_node = document.createElement("LI");
+        var clone = document.getElementById("tab_0");
+        var tab_node = clone.cloneNode(true);
+
+        tab_node.innerHTML = years[i];
+        tab_node.id = "tab_" + years[i];
+        tab_node.href = "#" + years[i];
+        tab_node.classList.remove("active");
+
+        li_node.appendChild(tab_node);
+        li_node.id = "li_" + years[i];
+        li_node.onclick = function () {
+            load_month_frame(this.id)
+        };
+        document.getElementById("nav_pills").appendChild(li_node);
+    }
+    document.getElementById("tab_0").id = "tab_" + years[0];
+    load_month_frame("li_" + year);
 }
 
 
@@ -105,35 +117,12 @@ function check_data() {
 }
 
 
-function load_data() {
-
-    images = [];
-    images_pi = [];
-    global_month = event.target.id.split("m")[1];
-    month = event.target.id.split("m")[1];
-    year = this.global_year.split("_")[1];
-    data = this.global_dates[year][month];
-    date_labels = Object.keys(data);
-
-    for (i = 0; i < Object.keys(data).length; i++) {
-        day_images = data[date_labels[i]];
-        for (x in day_images) {
-            image = day_images[x];
-
-            if (image.search("_pi") > -1) {
-                images_pi.push(day_images[x]);
-            } else {
-                images.push(day_images[x]);
-            }
-        }
-    }
-
-    localStorage.setItem("local_month", global_month);
-    localStorage.setItem("local_year", global_year);
-    localStorage.setItem("local_images", images);
-    localStorage.setItem("local_images_pi", images_pi);
+function return_last_page() {
+    year = localStorage.getItem("local_year").split("_")[1];
+    cmd = "location.href='POP'"
+    path = "./gallery.html"
+    window.location.replace(path + "#" + year);
 }
-
 
 function load_images() {
 
@@ -180,7 +169,38 @@ function load_images() {
 }
 
 
-function load_months(year) {
+function load_image_data() {
+
+    images = [];
+    images_pi = [];
+    global_month = event.target.id.split("m")[1];
+    month = event.target.id.split("m")[1];
+    year = this.global_year.split("_")[1];
+    data = this.global_dates[year][month];
+    date_labels = Object.keys(data);
+
+    for (i = 0; i < Object.keys(data).length; i++) {
+        day_images = data[date_labels[i]];
+        for (x in day_images) {
+            image = day_images[x];
+
+            if (image.search("_pi") > -1) {
+                images_pi.push(day_images[x]);
+            } else {
+                images.push(day_images[x]);
+            }
+        }
+    }
+
+    localStorage.setItem("local_month", global_month);
+    localStorage.setItem("local_year", global_year);
+    localStorage.setItem("local_images", images);
+    localStorage.setItem("local_images_pi", images_pi);
+}
+
+
+
+function load_month_frame(year) {
 
     var month_list = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
     var month_name = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -202,7 +222,7 @@ function load_months(year) {
             box.style.backgroundColor = "LightGreen";
             box.style.backgroundImage = "";
             box.addEventListener('click', function (event) {
-                load_data();
+                load_image_data();
                 window.location.replace("./gallery_month.html");
             });
 
