@@ -136,9 +136,9 @@ function load_images() {
     var flag = true;
 
     for (i = 0; i < images.length * 2; i++) {
-
         var temp_image = document.createElement("IMG");
         temp_image.style = "width:100%";
+
 
         if (counter > 3) {
             counter = 0;
@@ -163,8 +163,13 @@ function load_images() {
             }
         }
         counter += 1;
+
+        var temp_a = document.createElement("A");
+        temp_a.href = temp_image.src;
+        temp_a.target = "_blank";
+        temp_a.appendChild(temp_image);
         var col_element = document.getElementById("col_" + (i % 4 + 1));
-        col_element.appendChild(temp_image);
+        col_element.appendChild(temp_a);
     }
 }
 
@@ -219,15 +224,25 @@ function load_month_frame(year) {
     for (i = 0; i < month_list.length; i++) {
         var box = document.getElementById("m" + month_list[i]);
         if (months.includes(month_list[i])) {
+
+            var rando_image = "_pi";
+            while (rando_image.includes("_pi")) {
+                var days = Object.keys(global_dates[year.split("_")[1]][month_list[i]]);
+                var item = days[Math.floor(Math.random() * days.length)];
+                var image_list = global_dates[year.split("_")[1]][month_list[i]][item]
+                rando_image = image_list[Math.floor(Math.random() * image_list.length)];
+            }
+
+            //            box.style.backgroundImage = "url('" + rando_image + "')";
+            //            box.style.backgroundPosition = "center";
             box.style.backgroundColor = "LightGreen";
-            box.style.backgroundImage = "";
             box.addEventListener('click', function (event) {
                 load_image_data();
                 window.location.replace("./gallery_month.html");
             });
 
         } else {
-            box.style.backgroundColor = "LightGray";
+            box.style.backgroundColor = "darkgrey";
         }
         box.textContent = month_name[i];
     }
