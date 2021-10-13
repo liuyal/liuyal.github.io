@@ -26,12 +26,9 @@ function request_github_data() {
         method: 'GET',
         url: repo_tree_url,
     }, function printResult(result) {
-
         var data = JSON.parse(result)["tree"];
         var i;
-
         for (i = 0; i < data.length; i++) {
-
             if (data[i]["path"].indexOf("/") > -1 && data[i]["path"].indexOf(".png") > -1) {
 
                 var year = data[i]["path"].split("/")[0];
@@ -47,7 +44,6 @@ function request_github_data() {
                 if (!(day in global_dates[year][month])) {
                     global_dates[year][month][day] = [];
                 }
-
                 global_dates[year][month][day].push(raw_url + '/' + data[i]["path"]);
             }
 
