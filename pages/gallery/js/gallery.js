@@ -21,6 +21,7 @@ function request_github_data() {
     let raw_url = "https://raw.githubusercontent.com/liuyal/SpotLightSaver/master/";
     let repo_tree_url = "https://api.github.com/repos/liuyal/SpotLightSaver/git/trees/master?recursive=1";
 
+
     doCORSRequest({
         method: 'GET',
         url: repo_tree_url,
@@ -31,11 +32,11 @@ function request_github_data() {
 
         for (i = 0; i < data.length; i++) {
 
-            if (/^\d+$/.test(data[i]["path"])) {
+            if (data[i]["path"].indexOf("/") > -1 && data[i]["path"].indexOf(".png") > -1) {
 
-                var year = data[i]["path"].substr(0, 4);
-                var month = data[i]["path"].slice(4, -2);
-                var day = data[i]["path"].slice(-2);
+                var year = data[i]["path"].split("/")[0];
+                var month = data[i]["path"].split("/")[1];
+                var day = data[i]["path"].split("/")[2];
 
                 if (!(year in global_dates)) {
                     global_dates[year] = {};
@@ -43,26 +44,13 @@ function request_github_data() {
                 if (!(month in global_dates[year])) {
                     global_dates[year][month] = {};
                 }
-                global_dates[year][month][data[i]["path"]] = [];
-
-            } else {
-
-                if (data[i]["path"].indexOf("/") > -1) {
-
-                    var date_label = data[i]["path"].split("/")[0];
-                    var year = date_label.substr(0, 4);
-                    var month = date_label.slice(4, -2);
-                    var day = date_label.slice(-2);
-
-                    if (!(year in global_dates)) {
-                        global_dates[year] = {};
-                    }
-                    if (!(month in global_dates[year])) {
-                        global_dates[year][month] = {};
-                    }
-                    global_dates[year][month][date_label].push(raw_url + '/' + data[i]["path"]);
+                if (!(day in global_dates[year][month])) {
+                    global_dates[year][month][day] = [];
                 }
+
+                global_dates[year][month][day].push(raw_url + '/' + data[i]["path"]);
             }
+
         }
 
         set_ui();
@@ -129,7 +117,7 @@ function load_images() {
     month = localStorage.getItem("local_month");
     year = localStorage.getItem("local_year").split("_")[1];
     images = localStorage.getItem("local_images").split(",");
-    images_pi = localStorage.getItem("local_images_pi").split(",");
+    images_p = localStorage.getItem("local_images_p").split(",");
 
     var counter = 0;
     var im_index = 0
@@ -147,7 +135,7 @@ function load_images() {
 
         if (flag) {
             if (i % 2 > 0) {
-                temp_image.src = images_pi[im_index];
+                temp_image.src = images_p[im_index];
                 im_index += 1;
 
             } else {
@@ -159,7 +147,7 @@ function load_images() {
                 temp_image.src = images[im_index];
                 im_index += 1;
             } else {
-                temp_image.src = images_pi[im_index];
+                temp_image.src = images_p[im_index];
             }
         }
         counter += 1;
@@ -177,7 +165,7 @@ function load_images() {
 function load_image_data() {
 
     images = [];
-    images_pi = [];
+    images_p = [];
     global_month = event.target.id.split("m")[1];
     month = event.target.id.split("m")[1];
     year = this.global_year.split("_")[1];
@@ -189,8 +177,8 @@ function load_image_data() {
         for (x in day_images) {
             image = day_images[x];
 
-            if (image.search("_pi") > -1) {
-                images_pi.push(day_images[x]);
+            if (image.search("_p") > -1) {
+                images_p.push(day_images[x]);
             } else {
                 images.push(day_images[x]);
             }
@@ -200,7 +188,7 @@ function load_image_data() {
     localStorage.setItem("local_month", global_month);
     localStorage.setItem("local_year", global_year);
     localStorage.setItem("local_images", images);
-    localStorage.setItem("local_images_pi", images_pi);
+    localStorage.setItem("local_images_p", images_p);
 }
 
 
@@ -225,8 +213,8 @@ function load_month_frame(year) {
         var box = document.getElementById("m" + month_list[i]);
         if (months.includes(month_list[i])) {
 
-            var rando_image = "_pi";
-            while (rando_image.includes("_pi")) {
+            var rando_image = "_p";
+            while (rando_image.includes("_p")) {
                 var days = Object.keys(global_dates[year.split("_")[1]][month_list[i]]);
                 var item = days[Math.floor(Math.random() * days.length)];
                 var image_list = global_dates[year.split("_")[1]][month_list[i]][item]
