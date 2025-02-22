@@ -1,0 +1,31 @@
+name: TEST
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clean up repo
+        run: |
+          rm -rf *
+
+      - name: Delay
+        run: |
+          sleep 10s
+
+      - name: Run tests
+        run: |
+         echo "TEST" > ACCESS_TOKEN.txt
+
+      - name: Upload
+        run: |
+         echo "TEST" > ACCESS_TOKEN.txt
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ACCESS_TOKEN
+          path: ACCESS_TOKEN.txt
